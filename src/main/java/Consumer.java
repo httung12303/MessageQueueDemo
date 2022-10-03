@@ -9,7 +9,6 @@ public class Consumer {
     Connection conn = factory.newConnection();
     Channel channel = conn.createChannel();
     channel.queueDeclare("hello-world", false, false, false, null);
-    channel.queueDeclare("hello-world", false, false, false, null);
     channel.basicConsume(
         "hello-world",
         true,
