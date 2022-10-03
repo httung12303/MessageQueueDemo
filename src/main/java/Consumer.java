@@ -9,15 +9,16 @@ public class Consumer {
     Connection conn = factory.newConnection();
     Channel channel = conn.createChannel();
     channel.queueDeclare("hello-world", false, false, false, null);
+    System.out.println("Waiting for messages...");
     channel.basicConsume(
         "hello-world",
         true,
             (s, delivery) -> {
               String message = new String(delivery.getBody());
               System.out.println("Message received: " + message);
+              System.out.println("Waiting for messages...");
             },
         consumerTag -> {});
-    channel.close();
-    conn.close();
+
   }
 }
