@@ -2,7 +2,7 @@
 
 A simple demo application of MessageQueue with Rabbitmq. 
 
-Producer and Consumer both work on localhost:15672, which is the default server of Rabbitmq. Producer enqueue messages
+Producer and Consumer both work on localhost:15672 ('hello-world' queue), which is the default server of Rabbitmq. Producer enqueue messages
 until user enter SHUTDOWN message while each instance of Consumer dequeue and display all incoming messages in the
 queue.
 
